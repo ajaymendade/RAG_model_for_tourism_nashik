@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nashik Chatbot</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .response-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Nashik Chatbot</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="user_prompt">User Prompt:</label>
+                <input type="text" class="form-control" id="user_prompt" name="user_prompt" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" name="action" value="Submit">Submit</button>
+                <button type="submit" class="btn btn-secondary" name="action" value="Clear">Clear</button>
+            </div>
+        </form>
+
+        {% if response %}
+            <div class="response-container">
+                <h2>Chatbot Response:</h2>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
