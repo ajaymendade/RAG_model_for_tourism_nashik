@@ -16,7 +16,7 @@ vectorizer = model_data['vectorizer']
 index = model_data['index']
 
 # Initialize OpenAI API key
-openai.api_key = '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'
+openai.api_key = 'openai_key'
 
 # Initialize Spacy NLP model
 nlp = spacy.load("en_core_web_sm")
