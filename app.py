@@ -99,12 +99,13 @@ def home():
         action = request.form['action']
 
         if action == 'Submit':
-            # Retrieve information based on user prompt
+        # Retrieve information based on user prompt
             entities = extract_entities(user_prompt)
             retrieved_info = retrieve_information(user_prompt, vectorizer, index, df, entities)
 
+
             # Update context if information is retrieved
-            if retrieved_info is not None:
+            if retrieved_info is not None and 'Description' in retrieved_info:
                 context['previous_context'] = f"{context.get('previous_context', '')} {retrieved_info['Description']}"
 
             # Generate response using GPT-3
