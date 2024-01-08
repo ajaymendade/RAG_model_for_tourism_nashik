@@ -49,12 +49,12 @@ def retrieve_information(user_prompt, vectorizer, index, df, entities=None):
 # Placeholder for the generate_gpt_response function (replace it with your implementation)
 def generate_gpt_response(prompt):
     # Add "Nashik" to the prompt if not already present
-    if 'Nashik in 190 words' not in prompt:
-        prompt += ' Nashik'
+    if 'Nashik in 190 words' or 'nashik in 190 words' not in prompt:
+        prompt += ' in Nashik'
 
     try:
         # Set an initial max_tokens limit
-        max_tokens_limit = 200
+        max_tokens_limit = 400
 
         # Make the initial API call
         response = openai.Completion.create(
