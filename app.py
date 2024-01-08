@@ -49,7 +49,7 @@ def retrieve_information(user_prompt, vectorizer, index, df, entities=None):
 # Placeholder for the generate_gpt_response function (replace it with your implementation)
 def generate_gpt_response(prompt):
     # Add "Nashik" to the prompt if not already present
-    if 'Nashik in 190 tokens' not in prompt:
+    if 'Nashik in 190 words' not in prompt:
         prompt += ' Nashik'
 
     try:
