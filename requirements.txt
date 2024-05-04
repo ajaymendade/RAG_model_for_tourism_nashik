@@ -58,7 +58,7 @@ typing_extensions==4.9.0
 tzdata==2023.4
 urllib3==2.1.0
 wasabi==1.1.2
-waitress==2.1.1
+waitress==2.1.2
 weasel==0.3.4
 Werkzeug==3.0.1
 yarl==1.9.4
